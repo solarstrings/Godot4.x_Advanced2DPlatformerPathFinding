@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://kj4glxd13h7r"]
+
+[ext_resource type="Texture2D" uid="uid://bs8aqkoo31pl1" path="res://Scenes/Skeleton/Gfx/Skeleton.png" id="1_8api1"]
+[ext_resource type="Script" path="res://Scenes/Skeleton/Skeleton.cs" id="1_nrhq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njgpm"]
+size = Vector2(12, 27)
+
+[node name="Skeleton" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_nrhq5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_8api1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 4)
+shape = SubResource("RectangleShape2D_njgpm")
+
+[node name="PathFindTimer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="timeout" from="PathFindTimer" to="." method="OnPathFindTimerTimeout"]

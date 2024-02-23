@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b324x4g2pbspo"]
+
+[ext_resource type="Script" path="res://Scenes/Player/Player.cs" id="1_h1ov8"]
+[ext_resource type="Texture2D" uid="uid://bqu1fvm2u2qk5" path="res://Scenes/Player/Gfx/GodotDude.png" id="1_o3qvp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cy6o"]
+size = Vector2(20, 58)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_h1ov8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_o3qvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0cy6o")

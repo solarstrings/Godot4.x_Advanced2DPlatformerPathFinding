@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc0bfcm3xkdg0"]
+
+[ext_resource type="PackedScene" uid="uid://c6tmfv8nah4yg" path="res://Scenes/TileMapPathFind/TileMapPathFind.tscn" id="1_hnrc6"]
+[ext_resource type="PackedScene" uid="uid://b324x4g2pbspo" path="res://Scenes/Player/Player.tscn" id="2_m3llt"]
+[ext_resource type="PackedScene" uid="uid://kj4glxd13h7r" path="res://Scenes/Skeleton/Skeleton.tscn" id="3_exjjp"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMapPathFind" parent="." instance=ExtResource("1_hnrc6")]
+
+[node name="Player" parent="." instance=ExtResource("2_m3llt")]
+position = Vector2(372, 258)
+
+[node name="Skeleton" parent="." instance=ExtResource("3_exjjp")]
+position = Vector2(115, 464)
