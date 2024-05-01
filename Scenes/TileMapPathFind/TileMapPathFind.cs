@@ -78,7 +78,7 @@ public partial class TileMapPathFind : TileMap
 				newInfoPoint.IsLeftWall = true;   // Flag that it's a left wall
 			}
 			// If a tile exist to the right
-			if (GetCellSourceId(COLLISION_LAYER, new Vector2I(tile.X - 1, tile.Y)) != CELL_IS_EMPTY)
+			if (GetCellSourceId(COLLISION_LAYER, new Vector2I(tile.X + 1, tile.Y)) != CELL_IS_EMPTY)
 			{
 				newInfoPoint.IsRightWall = true;  // Flag that it's a right wall
 			}
